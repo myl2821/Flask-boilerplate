@@ -8,7 +8,7 @@ integrates ORM, UT and task manager Framework.
 Sometimes we are required to use python instead of ruby.
 
 ## Prerequisites
-* Linux(I have not tested it on windows)
+* *nix (I have not tested it on windows)
 * Python 2.7+
 * Mysql-server(change sql server as you like)
 
