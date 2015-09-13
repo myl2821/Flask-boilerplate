@@ -29,7 +29,7 @@ Sometimes we are required to use python instead of ruby.
 ```
 	$ invoke serve
 ```
-## test
+## Test
 
 ```
 	$ py.test
