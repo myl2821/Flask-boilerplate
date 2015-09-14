@@ -42,7 +42,8 @@ def gunicorn_stop():
     try:
         gunicorn_signal(signal.SIGKILL)
         os.remove('tmp/pid')
-    except OSError, IOError:
+        logging.info('gunicorn deamon stop')
+    except (OSError, IOError):
         logging.warning('gunicorn doesn\'t seem to be running')
         sys.exit()
 
@@ -50,7 +51,8 @@ def gunicorn_stop():
 def gunicorn_restart():
     try:
         gunicorn_signal(signal.SIGUSR2)
-    except OSError, IOError:
+        logging.info('gunicorn deamon restart')
+    except (OSError, IOError):
         logging.warning('gunicorn doesn\'t seem to be running')
         gunicorn_start()
 
@@ -59,7 +61,8 @@ def gunicorn_restart():
 def gunicorn_incr():
     try:
         gunicorn_signal(signal.SIGTTIN)
-    except OSError, IOError:
+        logging.info('increase gunicorn worker')
+    except (OSError, IOError):
         logging.warning('gunicorn doesn\'t seem to be running')
         sys.exit()
 
@@ -68,7 +71,8 @@ def gunicorn_incr():
 def gunicorn_decr():
     try:
         gunicorn_signal(signal.SIGTTOU)
-    except OSError, IOError:
+        logging.info('decrease gunicorn worker')
+    except (OSError, IOError):
         logging.warning('gunicorn doesn\'t seem to be running')
         sys.exit()
 
