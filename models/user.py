@@ -12,8 +12,8 @@ class User(db.Model):
         return bcrypt.hashpw(password, self.password_digest) == self.password_digest
 
     def __init__(self, username, password):
-        self.username = username 
-        self.password_digest = bcrypt.hashpw(password, bcrypt.gensalt(8))
+        self.username = username
+        self.password_digest = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt(8))
 
     def __repr__(self):
         return '<id {} username {}>'.format(self.id, self.username)
