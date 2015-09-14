@@ -27,7 +27,11 @@ def console():
     import code
     code.InteractiveConsole(locals=globals()).interact()
 
-# just shortcut of console
+# shortcuts
 @task(console)
 def c():
+    pass
+
+@task(serve)
+def s():
     pass

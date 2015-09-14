@@ -4,3 +4,4 @@ flask-migrate
 invoke
 mysql
 pytest
+bcrypt
