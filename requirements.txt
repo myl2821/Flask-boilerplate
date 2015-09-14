@@ -5,3 +5,7 @@ invoke
 mysql
 pytest
 bcrypt
+
+# Deployment
+gevent
+gunicorn

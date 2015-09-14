@@ -60,3 +60,6 @@ target/
 # Vim
 *.swp
 *.swa
+
+# Temp files
+tmp/

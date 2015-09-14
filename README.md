@@ -1,9 +1,9 @@
 # Flask-boilerplate
 
 A Flask boilerplate which
-integrates ORM, UT and task manager Framework.
+integrates ORM, UT and task manager.
 
-## Why not sinatra?
+## Why not Sinatra?
 
 Sometimes we are required to use python instead of ruby.
 
@@ -39,4 +39,14 @@ Sometimes we are required to use python instead of ruby.
 ```
 	$ source venv/bin/activate
 	$ py.test
+```
+
+## Deployment
+
+	Deploy using gunicorn and gevent.
+
+```
+	$ invoke gunicorn_start
+	$ invoke gunicorn_stop
+	$ invoke gunicorn_restart
 ```
